@@ -3,8 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Programming Survey</title>
   </head>
-  <body></body>
+  <body>
+    <main id="container">
+      <section id="panel-nav">
+        <div id="panel-nav-top">
+          <a id="logo">{ &nbsp;}</a>
+          <h1><span class="red">Programming</span> <br />Experience</h1>
+        </div>
+        <div id="panel-nav-indicators">
+          <span class="indicator-current"></span>
+          <span class="dot"><span class="indicators-text active">Welcome</span></span>
+          <div class="dot"><span class="indicators-text">User&nbsp;Info</span></div>
+          <div class="dot"><span class="indicators-text">Programming</span></div>
+          <div class="dot"><span class="indicators-text">Confim</span></div>
+        </div>
+      </section>
+      <section id="panel-body">
+        <div id="panel-body-main">
+          <h2>Welcome.</h2>
+          <hr />
+          <p>We would love to hear your thoughts on <span class="red">programming</span>.</p>
+          <p>Please take a moment to fill out this quick survey!</p>
+        </div>
+        <div id="panel-body-footer">
+          <button class="learn-more">
+            <span class="circle">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">BEGIN</span>
+          </button>
+
+          <!-- <a id="Start-btn">START</a> -->
+        </div>
+      </section>
+    </main>
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
 </html>
