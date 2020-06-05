@@ -15,33 +15,206 @@
       <section id="panel-nav">
         <div id="panel-nav-top">
           <a id="logo">{ &nbsp;}</a>
-          <h1><span class="red">Programming</span> <br />Experience</h1>
+          <h1 id="title"><span class="red">Programming</span> <br />Experience</h1>
         </div>
         <div id="panel-nav-indicators">
           <span class="indicator-current"></span>
-          <span class="dot"><span class="indicators-text active">Welcome</span></span>
-          <div class="dot"><span class="indicators-text">User&nbsp;Info</span></div>
-          <div class="dot"><span class="indicators-text">Programming</span></div>
-          <div class="dot"><span class="indicators-text">Confim</span></div>
+          <div class="indicator">
+            <div class="dot"></div>
+            <span class="indicators-text active">Welcome</span>
+          </div>
+          <div class="indicator">
+            <div class="dot"></div>
+            <span class="indicators-text">User&nbsp;Info</span>
+          </div>
+          <div class="indicator">
+            <div class="dot"></div>
+            <span class="indicators-text">Programming</span>
+          </div>
+          <div class="indicator">
+            <div class="dot"></div>
+            <span class="indicators-text">Confim</span>
+          </div>
         </div>
       </section>
       <section id="panel-body">
         <div id="panel-body-main">
-          <h2>Welcome.</h2>
-          <hr />
-          <p>We would love to hear your thoughts on <span class="red">programming</span>.</p>
-          <p>Please take a moment to fill out this quick survey!</p>
+          <div class="panel-screen active center">
+            <h2 class="highlight">Welcome.</h2>
+            <hr />
+            <p id="description">
+              We would love to hear your thoughts on <span class="red">programming</span>.<br />Please take a moment to
+              fill out this quick survey!
+            </p>
+          </div>
+          <div class="panel-screen">
+            <h2>User</h2>
+            <br />
+            <h2><span class="red">Information.</span></h2>
+            <hr />
+
+            <form id="survey-form" onsubmit="event.preventDefault();">
+              <label for="name" id="name-label">Name</label>
+              <input type="text" id="name" placeholder="Name" maxlength="140" required title="Please enter your name" />
+              <label for="company">Company</label>
+              <input type="text" id="company" placeholder="Company" required title="Please enter your company" />
+
+              <label for="email" id="email-label">Email</label>
+              <input type="email" id="email" placeholder="Email" required title="Please enter your email" />
+
+              <fieldset class="fieldset-gender">
+                <legend>Gender</legend>
+                <div class="radio">
+                  <input type="radio" name="gender" value="male" id="gender-male" checked="checked" />
+                  <label for="gender-male">Male</label>
+
+                  <input type="radio" name="gender" value="female" id="gender-female" />
+                  <label for="gender-female">Female</label>
+                </div>
+              </fieldset>
+
+              <div class="quantity">
+                <label for="number" id="number-label">Age</label>
+                <input
+                  type="number"
+                  id="number"
+                  class="age"
+                  min="1"
+                  max="100"
+                  step="1"
+                  value=""
+                  placeholder="Age"
+                  required
+                  title="Please enter your age"
+                />
+                <div class="quantity-nav">
+                  <div class="quantity-button quantity-up">+</div>
+                  <div class="quantity-button quantity-down">-</div>
+                </div>
+              </div>
+
+              <!-- Hidden for the test to be completed -->
+              <fieldset class="hidden">
+                <input type="checkbox" value="yes" />
+                <input type="checkbox" value="no" />
+                <textarea></textarea>
+
+                <select id="dropdown">
+                  <option value="v">value</option>
+                  <option value="v2">value 2</option>
+                  <option value="v3">value 3</option>
+                </select>
+
+                <!-- Hidden button for HTML5 validation  -->
+                <button id="submit" type="submit"></button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="panel-screen">
+            <h2>Experience</h2>
+            <br />
+            <h2><span class="red">Information.</span></h2>
+            <hr />
+
+            <form id="survey-form-2" onsubmit="event.preventDefault();">
+              <div class="select">
+                <label for="country">Country</label>
+                <select id="country" required>
+                  <option value="">Select Country</option>
+                  <option id="dropdown" value="CA">Canada</option>
+                  <option value="US">United States</option>
+                  <option value="FR">France</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="OT">Other</option>
+                </select>
+              </div>
+
+              <div class="select">
+                <label for="position">Current position</label>
+                <select id="position" required>
+                  <option value="">Select Position</option>
+                  <option value="ST">Student</option>
+                  <option value="WD">Web developer</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Interests</legend>
+                <input type="checkbox" id="frontend" value="Front-End" />
+                <label for="frontend" class="interest">Front-End</label>
+                <input type="checkbox" id="backend" value="Back-End" />
+                <label for="backend" class="interest">Back-End</label>
+                <input type="checkbox" id="fullstack" value="Full-Stack" />
+                <label for="fullstack" class="interest">Full-Stack</label>
+                <input type="checkbox" id="design" value="Design" />
+                <label for="design">Design</label>
+              </fieldset>
+
+              <div class="quantity">
+                <label for="experience">Experience</label>
+                <input
+                  type="number"
+                  id="experience"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value=""
+                  required
+                  placeholder="Experience"
+                  title="Please enter your experience"
+                />
+                <div class="quantity-nav">
+                  <div class="quantity-button quantity-up-exp">+</div>
+                  <div class="quantity-button quantity-down-exp">-</div>
+                </div>
+              </div>
+
+              <div class="comments">
+                <label for="comments">Comments</label>
+                <textarea id="comments" placeholder="Comments"> </textarea>
+              </div>
+
+              <!-- Hidden button for HTML5 validation  -->
+              <fieldset class="hidden">
+                <button id="submit2" type="submit"></button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="panel-screen center">
+            <h2 class="highlight">Thank you.</h2>
+            <small>Made by: dkbcode (github: DKBeaton)</small>
+            <hr />
+            <form id="survey-form-3" onsubmit="event.preventDefault();">
+              <div class="checkbox">
+                <input type="checkbox" id="conditions" required title="Click to agree to the terms" />
+                <label for="conditions">I agree to the terms and conditions</label>
+              </div>
+
+              <!-- Hidden button for HTML5 validation  -->
+              <fieldset class="hidden">
+                <button id="submit3" type="submit"></button>
+              </fieldset>
+            </form>
+          </div>
         </div>
-        <div id="panel-body-footer">
-          <button class="learn-more">
-            <span class="circle">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">BEGIN</span>
+        <section id="panel-body-footer">
+          <button class="btn-back hidden">
+            <span class="btn-text">BACK</span>
           </button>
 
-          <!-- <a id="Start-btn">START</a> -->
-        </div>
+          <div id="begin-footer">
+            <button class="btn-begin">
+              <span class="circle">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="btn-text">BEGIN</span>
+            </button>
+          </div>
+
+          <button class="btn-next hidden">
+            <span class="btn-text">NEXT</span>
+          </button>
+        </section>
       </section>
     </main>
     <script type="text/javascript" src="scripts/script.js"></script>
