@@ -21,7 +21,7 @@ const experienceMin = experienceInput.getAttribute('min');
 const experienceMax = experienceInput.getAttribute('max');
 
 let currentIndex = 0;
-const INDICATOR_PIXEL_GAP = 60;
+const INDICATOR_PIXEL_GAP = 61;
 
 // Next
 const next = () => {
